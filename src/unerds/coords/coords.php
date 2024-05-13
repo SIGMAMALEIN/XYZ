@@ -44,7 +44,7 @@ class Main extends PluginBase {
 
     public function onDisable(): void{
             $this->getLogger()->info("/coords disabled.");
-            return true;
+
 	}
 
 }
