@@ -1,5 +1,5 @@
 name: coords
-main: unerds\coords\coords
+main: \unerds\coords\coords
 version: 1.0.0
 api: 5.0.0
 author: unerds
