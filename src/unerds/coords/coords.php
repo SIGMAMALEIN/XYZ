@@ -40,6 +40,8 @@ class Main extends PluginBase {
 					$sender->sendMessage("This command only works in-game.");
 					return false;
             			}
+			return false; 
+			
 		}
 	}    
 
