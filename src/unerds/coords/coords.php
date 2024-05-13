@@ -1,46 +1,37 @@
 <?php
-
-
-
-
-
 namespace unerds\coords;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 
 
 
 
-class coords extends PluginBase {
+class Main extends PluginBase {
 	
-	public function onEnable(){
+	public function onEnable(): void{
 	$this->getLogger()->info("/coords enabled.");
-		return true;
+		
 	}
 
-	public function onLoad(){
+	public function onLoad():void {
 		$this->getLogger()->info("coords loaded");
 	}
 
-	public function onCommand(CommandSender $sender, Command $command, $label, array $args){
+	public function onCommand(CommandSender $sender, Command $command, $label, array $args):bool {
 		switch($command->getName()){
 			case "coords":
 				if($sender instanceof Player){
-					$playerX = $sender->getX();
-                			$playerY = $sender->getY();
-                			$playerZ = $sender->getZ();
+					$playerX = $sender->getPosition()->getFloorX();
+                			$playerY = $sender->getPosition()->getFloorY();
+                			$playerZ = $sender->getPosition()->getFloorZ();
                 			
-                			$outX=round($playerX,1);
-		                	$outY=round($playerY,1);
-		                	$outZ=round($playerZ,1);
 
-                			$playerLevel = $sender->getLevel()->getName();
 
-                			$sender->sendMessage("x:" . $outX . ", y:" . $outY . ", z:" . $outZ . ". On: " . $playerLevel);
+                			$sender->sendMessage("x:" . $playerX . ", y:" . $PlayerY . ", z:" . $PlayerZ);
 
 					return true;
 				}
@@ -51,9 +42,9 @@ class coords extends PluginBase {
 		}
 	}    
 
-    public function onDisable(){
+    public function onDisable(): void{
             $this->getLogger()->info("/coords disabled.");
-            return true;
+
 	}
 
 }
