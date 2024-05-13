@@ -1,14 +1,12 @@
 name: coords
 main: unerds\coords\coords
 version: 1.0.0
-api: [1.0.0]
-
-load: POSTWORLD
+api: 5.0.0
 author: unerds
-description: command to display player coordinates
-website: reddit.com/r/worstserverever
+permissions:
+ xyz.coords
 commands:
  coords:
   description: Returns Player Coordinates
   usage: "/coords"
-  permission: coords.command.coords
+  permission: xyz.coords
