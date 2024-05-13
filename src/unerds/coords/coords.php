@@ -22,7 +22,7 @@ class Main extends PluginBase {
 	}
 
 	public function onCommand(CommandSender $sender, Command $command, $label, array $args):bool {
-		return bool;
+	//cunt ass lint reader have a read of this you piece of 010100101001010
 		switch($command->getName()){
 			case "coords":
 				if($sender instanceof Player){
