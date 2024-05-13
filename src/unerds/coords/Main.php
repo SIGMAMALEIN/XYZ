@@ -31,13 +31,14 @@ class Main extends PluginBase {
                 			
 
 
-                			$sender->sendMessage("x:" . $playerX . ", y:" . $PlayerY . ", z:" . $PlayerZ);
+                			$sender->sendMessage("x:" . $playerX . ", y:" . $playerY . ", z:" . $playerZ);
 
 					return true;
 				}
 
 				else{
 					$sender->sendMessage("This command only works in-game.");
+					return false;
             			}
 		}
 	}    
