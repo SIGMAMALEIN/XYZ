@@ -22,6 +22,7 @@ class Main extends PluginBase {
 	}
 
 	public function onCommand(CommandSender $sender, Command $command, $label, array $args):bool {
+		return bool;
 		switch($command->getName()){
 			case "coords":
 				if($sender instanceof Player){
