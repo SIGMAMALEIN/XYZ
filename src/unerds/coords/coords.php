@@ -40,7 +40,7 @@ class Main extends PluginBase {
 					$sender->sendMessage("This command only works in-game.");
 					return false;
             			}
-			return false; 
+			// FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU CUNT CUNT CUNT DONT MAKE SLOPPY CODE FUCKWIT
 			
 		}
 	}    
